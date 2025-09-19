@@ -1,0 +1,7 @@
+# Requirements for the Repository Cloner Script
+# Core dependencies
+pyinstaller>=5.0
+
+# For shortcut creation (optional)
+pywin32>=306
+winshell>=0.6
