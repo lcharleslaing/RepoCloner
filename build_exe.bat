@@ -25,7 +25,7 @@ pip install pyinstaller
 
 echo.
 echo Building executable...
-pyinstaller --onefile --console --name "RepoCloner" repo_cloner.py
+pyinstaller RepoCloner.spec
 
 if errorlevel 1 (
     echo.

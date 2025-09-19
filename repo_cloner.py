@@ -172,13 +172,15 @@ def create_shortcut(repo_name, target_path):
         print(f"Shortcut created: {shortcut_path}")
         return True
         
-    except ImportError:
-        print("Warning: Required modules for shortcut creation not available.")
+    except ImportError as e:
+        print(f"Warning: Required modules for shortcut creation not available: {e}")
         print("Install pywin32 and winshell to enable shortcut creation:")
         print("pip install pywin32 winshell")
         return False
     except Exception as e:
         print(f"Error creating shortcut: {e}")
+        print(f"Target path: {target_path}")
+        print(f"Shortcut path: {shortcut_path}")
         return False
 
 
